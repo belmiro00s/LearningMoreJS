@@ -79,7 +79,7 @@ form.addEventListener('submit', function (ev) {
 
   const newDev = { fullname: fullnameInput.value, technologies: technologies }
 
-  developers.push(newDev)
+  developers.push(newDev)  
   alert('Developer sucessfully registered')
 
 
