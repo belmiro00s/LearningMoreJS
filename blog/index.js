@@ -1,17 +1,11 @@
-const Post = require('./post/index')
-const Comment = require('./comment/index')
 const Author = require('./author/index')
+const Jhon = new Author("Jhon doe")
+
+const post = Jhon.createPosts("TURN OF THE LIGHTS", "The most important thing to sleep better.")
 
 
+post.commentIntoPost("Belmiro00s", "That is true, keep on")
 
-const author = new Author('Guilherme Belmiro')
-const comments = new Comment("Realmente o dia estava lindo")
-const namePost = 'Dilma'
+console.log(Jhon)
+console.log(post)
 
-author.createPosts(namePost)
-comments.commentIntoPost(comments)
-
-
-const newPost = new Post(author, author.posts, comments.comments )
-
-console.log(newPost)

@@ -1,10 +1,9 @@
 class Comment{
-    constructor(){
-        this.comments  = []
+    constructor(username , content){
+        this.username  = username
+        this.content = content
     }
-    commentIntoPost(commentToInsert){
-        this.comments.push(commentToInsert)
-    }
+    
 }
 
 module.exports = Comment
