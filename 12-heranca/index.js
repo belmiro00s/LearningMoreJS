@@ -14,7 +14,8 @@ class House extends Property {} // using the extends to inherit the properties a
 
 class Apartment extends Property {
     constructor(number, area, price) {
-        super(area, price) // using the parent constructor to inherit the properties and behavior of Property Class. 
+        super(area, price) 
+        // using the parent constructor to inherit the properties and behavior of Property Class. 
 
         this.number = number 
     }

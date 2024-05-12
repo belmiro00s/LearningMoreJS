@@ -25,14 +25,9 @@ class Component {
 
 }
 
-class Inputs extends Component {}
 
 
-class Labels extends Component {
-    constructor(textContent){
-        this.textContent = textContent
-    }
-}
+
 
 
 class Forms extends Component {
