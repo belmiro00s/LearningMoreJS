@@ -1,19 +1,26 @@
 class Component {
-    #element
-    constructor(element) {
-        this.#element = element
+    #element = null
+    constructor(tag, parent, options) {
+        this.tag = tag
+        this.parent = parent
+        this.options = options
+        this.buildElement()
     }
 
-    accesToElement() {
+    getElement() {
         return this.#element
     }
 
     buildElement() {
-        this.#element = document.createElement('div')
+        this.#element = document.createElement(this.tag)
     }
 
-    render(target) {
-        target.appendChild(this.#element)
+    render() {
+        if (this.parent instanceof Component){
+            this.parent.getElement().append(this.#element)
+        }else{
+            document.querySelector(this.parent).append(this.#element)
+        }
     }
 
 }
