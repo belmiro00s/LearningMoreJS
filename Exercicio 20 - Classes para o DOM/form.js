@@ -8,7 +8,7 @@ export class Form extends Component {
 
     addchildren(...children){
         children.forEach(child => {
-            this.getElement().appendChild(child.getElement())
+            this.getElement().appendChild(child.getElement()) // for each children element, it will be attached to the parent element
         })
     }
 }

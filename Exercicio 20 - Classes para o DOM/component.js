@@ -1,40 +1,28 @@
 export class Component {
-    #element = null 
+    #element = null // private element 
     constructor(tag, parent, options) {
         this.tag = tag // to indentify the element
-        this.parent = parent //
+        this.parent = parent // parent element
         this.options = options
-        this.buildElement()
+        this.buildElement() 
     }
 
     getElement() {
-        return this.#element
+        return this.#element // method that acess the private element 
     }
 
     buildElement() {
-        this.#element = document.createElement(this.tag)
+        this.#element = document.createElement(this.tag) //method to create the element
+        Object.assign(this.#element, this.options) //copy the options properties to the private #element 
     }
 
     render() {
-        if (this.parent instanceof Component){
-            this.parent.getElement().append(this.#element)
+        if (this.parent instanceof Component){ // check if parent element belongs to class Component
+            this.parent.getElement().append(this.#element) // attaching this.#element to parent element
         }else{
             document.querySelector(this.parent).append(this.#element)
         }
     }
 
 }
-
-
-
-
-
-
-class Forms extends Component {
-
-    appendElement(target){
-        target.append(this.accesToElement())
-    }
-}
-
 
