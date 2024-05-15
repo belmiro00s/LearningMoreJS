@@ -1,8 +1,8 @@
-class Component {
-    #element = null
+export class Component {
+    #element = null 
     constructor(tag, parent, options) {
-        this.tag = tag
-        this.parent = parent
+        this.tag = tag // to indentify the element
+        this.parent = parent //
         this.options = options
         this.buildElement()
     }

@@ -16,6 +16,6 @@
   "bugs": {
     "url": "https://github.com/belmiro00s/LearningMoreJS/issues"
   },
-  "homepage": "https://github.com/belmiro00s/LearningMoreJS#readme"
-
+  "homepage": "https://github.com/belmiro00s/LearningMoreJS#readme",
+  "type": "module"
 }
