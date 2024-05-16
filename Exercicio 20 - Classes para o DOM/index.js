@@ -3,13 +3,13 @@ import { Labels } from "../Exercicio 20 - Classes para o DOM/labels.js";
 import { Input } from "../Exercicio 20 - Classes para o DOM/inputs.js"
 import { Component } from "../Exercicio 20 - Classes para o DOM/component.js";
 
-const el = new Component('h1', 'body', {innerText: "Ola Mundo!"}) 
+const title = new Component('h1', 'body', {innerText: "Ola Mundo!"}) 
 
-console.log(el)
+console.log(title)
 
 
-el.tag = 'h2'
-el.buildElement().render() //creating and render the element 
+title.tag = 'h1'
+title.buildElement().render() //creating title and render 
 
 
 const form = new Form('body')
@@ -17,10 +17,10 @@ const form = new Form('body')
 const label = new Labels('Nome', form, {htmlFor:'nameInput'})
 const input = new Input(form, {id: 'nameInput', name: 'birthday'})
 
-form.render()
+form.render() 
 
 label.render()
-form.addchildren(input)
+form.addchildren(input) // attaching input element to form, using method addchildren
 
 form.addchildren(
     new Component('br'),
@@ -28,4 +28,6 @@ form.addchildren(
     new Labels('Data de Nascimento', {htmlFor: 'birthdayInput'}),
     new Input(form, {id: 'birthdayInput', name: 'birthday', type: 'date'})
 )
+
+console.log(form)
 

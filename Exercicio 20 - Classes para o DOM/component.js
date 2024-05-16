@@ -14,6 +14,7 @@ export class Component {
     buildElement() {
         this.#element = document.createElement(this.tag) //method to create the element
         Object.assign(this.#element, this.options) //copy the options properties to the private #element 
+        return this
     }
 
     render() {
