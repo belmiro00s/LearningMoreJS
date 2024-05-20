@@ -29,6 +29,13 @@ class bike extends Vehicle {
 }
 
 
+const chevette = new car()
+const titanic = new ship()
+
+
+
+chevette.move()
+titanic.move(200)
 
 
 
