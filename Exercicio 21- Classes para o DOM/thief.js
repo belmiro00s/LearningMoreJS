@@ -1,7 +1,7 @@
 import {Character} from "./game.js"
 
 
-class Thief extends Character{
+export class Thief extends Character{
     constructor(health, attackPoints, defensePoints){
         super('Thief', health, attackPoints, defensePoints)
     }
