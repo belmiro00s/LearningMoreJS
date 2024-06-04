@@ -16,9 +16,6 @@ export class Thief extends Character{
     }
     }
 
-const character1 = new Thief(100, 150, 200)
-const character2 = new Character('Rat', 200, 20, 100)
 
-console.log(character1.attack(character2)) 
 
 

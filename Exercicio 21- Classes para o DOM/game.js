@@ -15,10 +15,6 @@ export class Character {
     }
 }
 
-const character1 = new Character('Snake', 100, 200, 100);
-const character2 = new Character('Rat', 200, 20, 100);
-
-console.log(character1.attack(character2))
 
 
 
