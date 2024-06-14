@@ -59,24 +59,24 @@ module.exports = class Database {
     }
 
 
-saveUser(user){
-    const userExists = this.#storage.users.find(u => u.email === user.email)
-    if (!userExists) {
-        this.#storage.users.push(user)
+    saveUser(user) {
+        const userExists = this.#storage.users.find(u => u.email === user.email)
+        if (!userExists) {
+            this.#storage.users.push(user)
+        }
     }
-}
 
-saveOrder(order){
-    this.#storage.orders.push(order)
-}
+    saveOrder(order) {
+        this.#storage.orders.push(order)
+    }
 
-showStorage() {
-    console.table(this.#storage.authors)
-    console.table(this.#storage.books)
-    console.table(this.#storage.posters)
-    console.table(this.#storage.users)
-    console.table(this.#storage.orders.map(order => order.data))
-  }
+    showStorage() {
+        console.table(this.#storage.authors)
+        console.table(this.#storage.books)
+        console.table(this.#storage.posters)
+        console.table(this.#storage.users)
+        console.table(this.#storage.orders.map(order => order.data))
+    }
 
 }
 
