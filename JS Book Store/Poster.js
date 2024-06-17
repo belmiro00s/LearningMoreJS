@@ -1,9 +1,11 @@
-const Product = require("./Product.js")
+import Product from './Product.js';
 
-module.exports = class Poster extends Product {
+class Poster extends Product {
     constructor(name, description, height, width, price, inStock){
         super(name, description, price, inStock)
         this.height = height,
         this.width = width
     }
 }
+
+export default Poster

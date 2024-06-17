@@ -1,4 +1,4 @@
-module.exports = class Product {
+ class Product {
     constructor(name, description, price, inStock = 0) {
         this.name = name,
             this.description = description,
@@ -12,7 +12,10 @@ module.exports = class Product {
     }
 
 
-    removeFromStock() {
+    removeFromStock(quantity) {
         this.inStock -= quantity
     }
 }
+
+export default Product 
+

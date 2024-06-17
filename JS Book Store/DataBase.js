@@ -1,4 +1,4 @@
-module.exports = class Database {
+class Database {
     #storage = {
         authors: [],
         books: [],
@@ -21,14 +21,14 @@ module.exports = class Database {
     }
 
     saveBook(book) {
-        const bookExists = this.findBookName(book.name)
+        const bookExists = this.findBookByName(book.name)
         if (!bookExists) [
             this.#storage.books.push(book)
         ]
     }
 
     addBooksToStock(bookName, quantity) {
-        const book = this.findBookName(bookName)
+        const book = this.findBookByName(bookName)
         book?.addToStock(quantity)
     }
 
@@ -71,7 +71,7 @@ module.exports = class Database {
     }
 
     showStorage() {
-        console.table(this.#storage.authors)
+        console.table(`Authors: ${this.#storage.authors}`)
         console.table(this.#storage.books)
         console.table(this.#storage.posters)
         console.table(this.#storage.users)
@@ -80,3 +80,4 @@ module.exports = class Database {
 
 }
 
+export default Database
