@@ -5,9 +5,9 @@ class Loan {
     static #interestRate = 0
 
     constructor(valueLoanloan, numberInstallments){
-        this.valueLoan = valueLoanloan
-        this.numberInstallments = numberInstallments
-        this.loanInstallments = this.installmentCalculation()
+        this.valueLoan = valueLoanloan //valor emprestimo
+        this.numberInstallments = numberInstallments //numeros de parcelas
+        this.loanInstallments = this.installmentCalculation() //parcelas do emprestimo
         this.createDate = new Date()
     }
 
@@ -32,7 +32,7 @@ class Loan {
 
 
     set setNewRate(rate){
-        Loan.#interestRate += rate
+        Loan.#interestRate = +1 (rate / 100)
     }
 }
 
