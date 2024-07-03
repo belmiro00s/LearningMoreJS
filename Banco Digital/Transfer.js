@@ -6,3 +6,6 @@ class Transfer {
         this.createDate = new Date()
     }
 }
+
+
+export default Transfer
