@@ -34,12 +34,12 @@ class Account {
     }
 
     //method for those receiveing the transfers
-    makeTransfer(sendingUser, recevingUser, amount) {
+    makeTransfer(sendingUser, receivingUser, amount) {
         if (amount <= 0) {
             throw new Error("the amount entered must to be positive")
         }
         if (sendingUser === this.owner) { //send to self 
-            const transfer = new Transfer(sendingUser, recevingUser, amount)
+            const transfer = new Transfer(sendingUser, receivingUser, amount)
             this.transfers.push(transfer)
             this.#balance += amount
         } else {//send to another account
@@ -47,10 +47,14 @@ class Account {
                 throw new Error("Insufficient balance for transfer")
             }
         }
-        const transfer = new Transfer(this.owner, recevingUser.owner, amount)
+        const transfer = new Transfer(this.owner, receivingUser.owner, amount)
         this.transfers.push(transfer)
         this.#balance -= amount
-        recevingUser.receiveTransfer(amount, this.owner)
+        
+        if (!(receivingUser instanceof Account)) {
+            throw new Error("receivingUser must be an instance of Account");
+        }
+        receivingUser.receiveTransfer(amount, this.owner)
 
     }
 
