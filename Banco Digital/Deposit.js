@@ -4,3 +4,5 @@ class Deposit {
         this.createDate = new Date()
     }
 }
+
+export default Deposit

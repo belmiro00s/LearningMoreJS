@@ -4,3 +4,5 @@ class Installment{
         this.numberLoan = numberLoan
     }
 }
+
+export default Installment

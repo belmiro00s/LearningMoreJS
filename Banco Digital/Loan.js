@@ -42,3 +42,7 @@ const loan1 = new Loan(200, 2)
 loan1.installmentCalculation()
 
 console.log(loan1)
+
+
+
+export default Loan
