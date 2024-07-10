@@ -82,5 +82,5 @@ console.log(`Balance ${account2.owner} account: ${account2.getBalance()}`)
 console.log(`Balance ${account.owner} account: ${account.getBalance()}`)
 
 
-export default App
+export default Account
 
