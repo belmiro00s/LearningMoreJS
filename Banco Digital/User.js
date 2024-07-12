@@ -1,8 +1,10 @@
-class User {
-    constructor(name, email, account){
+import Account from "./Account.js"
+
+class User  {
+    constructor(name, email){
         this.name = name 
         this.email = email
-        account = account
+        this.account = new Account(email)
     }
 }
 
