@@ -36,7 +36,7 @@ class App {
             console.log('List of all Users:')
             allUsers.forEach((user, index) => {
                 const balance = user.account.getBalance()
-                console.log(`${index + 1}. ${user.name} (${user.email}) - Balance $${balance.toFixed(2)}`)
+                console.log(`${index + 1}. ${user.name} (${user.email}) - Balance: ${balance}`)
             })
         }
     }
@@ -69,9 +69,10 @@ class App {
         if (!sendingUser || !receiverUser) {
             throw new Error('The transfer could not be completed')
         }
-        if (receiverUser && receiverUser.account && sendingUser && sendingUser.account instanceof Account) {
-            receiverUser.account.makeTransfer(sendindEmail, receiverEmail, amount)
+        if (!(sendingUser.account instanceof Account) || !(receiverUser.account instanceof Account)) {
+            throw new Error('The transfer could not be completed: Invalid account')
         }
+        sendingUser.account.makeTransfer(sendingUser.account, receiverUser.account, amount)
     }
 }
 
@@ -80,7 +81,7 @@ class App {
 
 const user1 = App.createUser('Belmiro', 'lops@aros.com')
 //const user2 = App.createUser('Belmiro', 'lops@aros.com')
-const user2 = App.createUser('posl', 'ps@aros.com')
+const user2 = App.createUser('Poatam', 'ps@aros.com')
 
 
 App.deposits('lops@aros.com', 500)

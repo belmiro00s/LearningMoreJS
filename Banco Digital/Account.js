@@ -3,16 +3,18 @@ import Transfer from './Transfer.js';
 
 class Account {
     #balance // saldo privado
+    #loanRate
     constructor(owner) {
         this.owner = owner
         this.#balance = 0
         this.loans = []
+        this.#loanRate
         this.deposits = []
         this.transfers = []
     }
 
     getBalance() {
-        return `current balance: ${this.#balance}`
+        return `current balance: $${this.#balance}`
     }
 
     deposit(amount) {
@@ -75,7 +77,7 @@ const account2 = new Account("Roberto")
 
 
 // account.makeTransfer(account.owner, account, 30) //Cenario onde o proprio dono da conta faz uma transferencia pra ele mesmo
-// account.makeTransfer(account.owner, account2, 30) //Cenario onde o  dono da conta faz uma transferencia pra outra conta
+ account.makeTransfer(account.owner, account2, 30) //Cenario onde o  dono da conta faz uma transferencia pra outra conta
 
 // console.log(`Balance ${account.owner} account: ${account.getBalance()}`)
 // console.log(`Balance ${account2.owner} account: ${account2.getBalance()}`)
