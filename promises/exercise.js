@@ -37,7 +37,7 @@ function idealWeightCheck(weight, height) {
     })
 }
 
-const tears = idealWeightCheck(96, 1.75)
+const tears = idealWeightCheck(84, 1.80)
 
 setTimeout(() => {
     console.log(tears)
