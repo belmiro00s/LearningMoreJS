@@ -22,7 +22,7 @@ async function getCountries() {
     const countries =  await response.json()
     console.log(countries)
 
-    countries.forEach((country)=>{
+    countries.forEach((country)=>{ // For each country returned in the response, a new card is created for this country
         createCountryCard(country)
     })
 }
