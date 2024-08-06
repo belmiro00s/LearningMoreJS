@@ -1,0 +1,16 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur",
+      "author": "Belmiro"
+    },
+    {
+      "id": "6573",
+      "title": "Respect",
+      "author": "Belmiro",
+      "content": "Respect comes from nursery"
+    }
+  ]
+}
