@@ -18,13 +18,23 @@ document.querySelector('#add-transaction').addEventListener('submit', async (ev)
     const method = transactionId ? 'PUT' : 'POST'
 
     //Executing the POST request with fetch
-    const response = await fetch(url, {
-        method: method,
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(transactionData)
-    });
+
+    try {
+        const response = await fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(transactionData)
+        })
+
+        if (response.ok) {
+            console.log(`sucess transaction ${method}`)
+        }
+    } catch (err) {
+        console.error('Error to performing:', err)
+    }
+
 
 
 
@@ -133,7 +143,7 @@ function pasteInfoForm(transactionData) {
 
 
 async function deletetransactionById(transactionId) {
-    const url = `http://localhost:3000/transactions/${transactionId}`;
+    const url = `http://localhost:3000/transactions/${transactionId}`
 
     try {
         const response = await fetch(url, {
@@ -141,12 +151,12 @@ async function deletetransactionById(transactionId) {
         });
 
         if (response.ok) {
-            console.log(`Transaction with ID ${transactionId} deleted successfully.`);
+            console.log(`Transaction with ID ${transactionId} deleted successfully.`)
         } else {
-            console.error('Failed to delete transaction:', response.statusText);
+            console.error('Failed to delete transaction:', response.statusText)
         }
     } catch (error) {
-        console.error('Error deleting transaction:', error);
+        console.error('Error deleting transaction:', error)
     }
 }
 

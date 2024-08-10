@@ -1,16 +1,3 @@
 {
-  "transactions": [
-    {
-      "date": "1000-02-22",
-      "description": "dasd",
-      "amount": 400,
-      "id": "8eea"
-    },
-    {
-      "id": "493e",
-      "date": "2222-02-22",
-      "description": "dnasjdn",
-      "amount": 100
-    }
-  ]
+  "transactions": []
 }
