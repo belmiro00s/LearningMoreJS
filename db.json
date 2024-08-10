@@ -1,16 +1,16 @@
 {
   "transactions": [
     {
-      "date": "6666-04-04",
-      "description": "6666",
-      "amount": "7722",
-      "id": "1"
+      "date": "1000-02-22",
+      "description": "dasd",
+      "amount": 400,
+      "id": "8eea"
     },
     {
-      "date": "0002-02-22",
-      "description": "2222",
-      "amount": "222222222222222222222",
-      "id": "e887"
+      "id": "493e",
+      "date": "2222-02-22",
+      "description": "dnasjdn",
+      "amount": 100
     }
   ]
 }
